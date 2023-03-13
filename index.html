@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Movie Ticket Booking</title>
+	<style>
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin-top: 50px;
+			background-image: url('image/movie1.jpeg'); /* URL of your image */
+			background-size: cover;
+			padding: 20px;
+			border-radius: 10px;
+			box-shadow: 0px 0px 10px grey;
+		}
+
+		input, select {
+			margin: 10px;
+			padding: 10px;
+			width: 200px;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 1px 1px 5px grey;
+			font-size: 16px;
+		}
+
+		button {
+			margin-top: 20px;
+			padding: 10px;
+			width: 200px;
+			background-color: blue;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			box-shadow: 1px 1px 5px grey;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		button:hover {
+			background-color: darkblue;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<label for="name">Name:</label>
+		<input type="text" id="name" required>
+
+		<label for="email">Email:</label>
+		<input type="email" id="email" required>
+
+		<label for="phone">Phone:</label>
+		<input type="tel" id="phone" required>
+
+		<label for="movie">Movie:</label>
+		<select id="movie" required>
+			<option value="">--Please select a movie--</option>
+			<option value="movie1">RC 15</option>
+			<option value="movie2">RRR</option>
+			<option value="movie3">SALAAR</option>
+		</select>
+
+		<label for="date">Date:</label>
+		<input type="date" id="date" required>
+
+		<label for="time">Time:</label>
+		<input type="time" id="time" required>
+
+		<button type="submit" id="book-ticket">Book Ticket</button>
+	</form>
+
+	<script>
+		document.getElementById("book-ticket").addEventListener("click", function(event){
+			event.preventDefault();
+			// Add your code to submit the form and book the ticket here
+			alert("Ticket booked successfully!");
+		});
+	</script>
+</body>
+</html>
